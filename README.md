@@ -1,17 +1,3 @@
-Yes. Now that you have provided the **actual agent files**, I can match the README to your implementation instead of guessing.
-
-Your `agents/` folder is implementing a **specialized multi-agent workflow** with:
-
-* `router.py` → decides which agent should handle the request
-* `learning_agent.py` → teaches DSA concepts
-* `practice_agent.py` → provides practice problems
-* `hint_agent.py` → gives guided hints
-* `solution_agent.py` → provides complete solutions
-* `code_review_agent.py` → reviews student code using RAG
-* `critic_agent.py` → verifies the generated answer and controls the reasoning/retry loop
-
-Below is the **updated README section/content specifically based on the code you provided**, using the **What → Why → How** format.
-
 # 🧠 DSA Coach Agent
 
 An AI-powered **Data Structures and Algorithms learning, practice, code-review, and assessment assistant** built using Python, Streamlit, Gemini, PostgreSQL, pgvector, RAG, and a specialized multi-agent architecture.
@@ -1313,9 +1299,7 @@ The retrieval layer searches these vectors to identify relevant knowledge.
 
 ---
 
-# 21. Project Structure
-
-The project is organized approximately as:
+#📁 Project Structure
 
 ```text
 DSA-Coach-Agent/
@@ -1330,25 +1314,44 @@ DSA-Coach-Agent/
 │   ├── code_review_agent.py
 │   └── critic_agent.py
 │
+├── data/
+│   ├── notes/
+│   │   └── DSA knowledge files
+│   │
+│   ├── stories/
+│   │   └── DSA story-based explanations
+│   │
+│   ├── descriptions/
+│   │   └── DSA problem descriptions
+│   │
+│   └── leetcode.json
+│
+├── uploads/
+│   ├── py/
+│   │   └── Student Python files
+│   │
+│   └── ipynb/
+│       └── Student Jupyter Notebook files
+│
 ├── app.py
 ├── coach.py
+├── graph.py
+├── state.py
+├── conversation.py
 ├── rag.py
 ├── ingest.py
 ├── database.py
 ├── config.py
 ├── evaluator.py
 ├── rubric_generator.py
+│
 ├── create_tables.sql
 ├── requirements.txt
+├── Dockerfile
+├── .dockerignore
+├── docker-compose.yml
 ├── README.md
-├── .gitignore
-├── .env
-├── data/
-   └── notes/
-   ├── stories/
-   ├── leetcode.json
-   └── descriptions/
-```
+└── .gitignore
 
 ---
 
